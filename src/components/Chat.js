@@ -12,7 +12,7 @@ const Chat = () => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/sessions/${sessionId}`);
+        const res = await axios.get(`https://simplified-chat-application-backend-zmi0.onrender.com/api/sessions/${sessionId}`);
         setHistory(res.data.history);
       } catch (error) {
         alert('Error loading session');
@@ -24,7 +24,7 @@ const Chat = () => {
   const askQuestion = async () => {
     if (!question.trim()) return;
     try {
-      const res = await axios.post('http://localhost:5000/api/chat/ask', { sessionId, question });
+      const res = await axios.post('https://simplified-chat-application-backend-zmi0.onrender.com/api/chat/ask', { sessionId, question });
       setHistory([...history, { question, answer: res.data }]);
       setQuestion('');
     } catch (error) {

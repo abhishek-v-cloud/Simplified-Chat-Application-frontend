@@ -9,7 +9,7 @@ const Landing = () => {
 
   const startNewChat = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/chat/start');
+      const res = await axios.post('https://simplified-chat-application-backend-zmi0.onrender.com/api/chat/start');
       const { sessionId } = res.data;
       setHistory([]); // Reset history
       navigate(`/chat/${sessionId}`);

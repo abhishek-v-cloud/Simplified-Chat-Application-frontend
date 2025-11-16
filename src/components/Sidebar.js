@@ -15,7 +15,7 @@ const Sidebar = () => {
   useEffect(() => {
     const fetchSessions = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/sessions');
+        const res = await axios.get('https://simplified-chat-application-backend-zmi0.onrender.com/api/sessions');
         setSessions(res.data);
       } catch (error) {
         alert('Error fetching sessions');
@@ -27,7 +27,7 @@ const Sidebar = () => {
   // Start new chat
   const startNewChat = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/chat/start');
+      const res = await axios.post('https://simplified-chat-application-backend-zmi0.onrender.com/api/chat/start');
       const { sessionId } = res.data;
       setHistory([]);
       navigate(`/chat/${sessionId}`);
@@ -35,7 +35,7 @@ const Sidebar = () => {
       // Refresh the session list
       const fetchSessions = async () => {
         try {
-          const res = await axios.get('http://localhost:5000/api/sessions');
+          const res = await axios.get('https://simplified-chat-application-backend-zmi0.onrender.com/api/sessions');
           setSessions(res.data);
         } catch (error) {
           alert('Error fetching sessions');
