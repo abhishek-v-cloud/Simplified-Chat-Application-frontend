@@ -1,4 +1,4 @@
-# SSimplified Chat Application Client Side
+# Simplified Chat Application Client Side
 
 A React-based chat application frontend with dark/light theme support, built with Tailwind CSS.
 
@@ -17,6 +17,10 @@ A React-based chat application frontend with dark/light theme support, built wit
 - **Tailwind CSS**: Utility-first CSS framework with dark mode support
 - **Axios**: HTTP client for API calls
 - **Create React App**: Build setup
+
+## Backend Github url
+
+- https://github.com/abhishek-v-cloud/Simplified-Chat-Application-backend.git
 
 ## Getting Started
 
